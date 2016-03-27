@@ -1,7 +1,6 @@
-int pin = 8;
 void setup(){
   Serial.begin(9600);
-  pinMode(pin,OUTPUT);
+  pinMode(8,OUTPUT);
 }
 //49 입력시 led on, 48입력시 off
 void loop(){
@@ -9,9 +8,9 @@ void loop(){
   {
     int swt = (int)Serial.read();
     if(swt == 49)
-     digitalWrite(pin, 1);
+     digitalWrite(8, 1);
     else
-     digitalWrite(pin, 0);
+     digitalWrite(8, 0);
   }
 }
 
